@@ -38,6 +38,7 @@ exports.cssLoaders = function (options) {
       return ExtractTextPlugin.extract({
         use: loaders,
         fallback: 'vue-style-loader'
+        //publicPath: '../../'
       })
     } else {
       return ['vue-style-loader'].concat(loaders)
@@ -56,7 +57,7 @@ exports.cssLoaders = function (options) {
               loader: 'sass-resources-loader',
               options: {
                 // it need a absolute path
-                resources: [resolveResouce('reset.scss'), resolveResouce('global.scss')]
+                resources: resolveResouce('global.scss')
               }
           }
       ];
@@ -75,8 +76,8 @@ exports.cssLoaders = function (options) {
     css: generateLoaders(),
     postcss: generateLoaders(),
     less: generateLoaders('less'),
-    // sass: generateLoaders('sass', { indentedSyntax: true }),
-    sass: generateSassResourceLoader(),
+    sass: generateLoaders('sass', { indentedSyntax: true }),
+    // sass: generateSassResourceLoader(),
     // scss: generateLoaders('sass'),
     scss: generateSassResourceLoader(),
     stylus: generateLoaders('stylus'),

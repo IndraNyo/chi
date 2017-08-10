@@ -9,7 +9,7 @@ $mainTxt:           #192027;
 $primaryTxt:        #d4ad54;
 $secondaryTxt:      #8c8c8c;
 $white:             #fff;
-$gray:              #7a7784;
+$gray:              #70767c;
 $grey:              #bbb;
 $off-white:         #cfcfcf;
 $border:            #73707e;
@@ -162,9 +162,11 @@ $vw_base: 750;
     @return ($px / $vw_base) * 100vw;
 }
 
+
 /*body*/
 body{
   background-color: $mainColor;
+  font-family:Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", STXihei, "Microsoft YaHei";
 }
 
 .line-clamp {
