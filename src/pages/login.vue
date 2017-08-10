@@ -1,17 +1,19 @@
 <template>
-    <div>
-        <p>Hello <span>World</span></p>
+    <div id="Login">
+        <div class="login-wrap">
+            <input type="text">
+            <input type="password">
+        </div>
     </div>
 </template>
+
 <script>
 
 </script>
 
-<style lang="scss" scoped>
-    // p{
-    //     color: #f90;
-    //     span{
-    //         color: #f20;
-    //     }
-    // }
+<style lang="scss">
+    .login-wrap{
+        border: 1px solid $border;
+        @include borderR(5px);
+    }
 </style>
