@@ -9,6 +9,11 @@ export default new Router({
       path: '/',
       name: 'login',
       component: require('../pages/login.vue')
+    },
+    {
+      path: '/',
+      name: 'register',
+      component: require('../pages/register.vue')
     }
   ]
 })

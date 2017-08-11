@@ -1,8 +1,6 @@
 <template>
     <div id="Login">
-        <div class="logo"></div>
-        <div class="login-bg-1"></div>
-        <div class="login-bg-2"></div>
+        <div class="login-bg"><div class="logo"></div></div>
         <div class="login-wrap">
             <div class="input-wrap">
                 <i class="indrafont i-email"></i>
@@ -19,7 +17,7 @@
         </div>
         <div class="register-wrap">
             <p>Still not register?</p>
-            <p>Please <a class="btn-register" href="#">Sing up</a></p>
+            <p>Please <a @click="router.push('/register')" class="btn-register">Sing up</a></p>
         </div>
     </div>
 </template>
@@ -29,37 +27,29 @@
 </script>
 
 <style lang="scss" scopped>
-    .logo{
-        position: absolute;
-        top: vw(340);
-        left: vw(277);
-        width: vw(197);
-        height: vw(197);
-        @include image-2x('../assets/logo.png', vw(197), vw(197));
-        z-index: 300;
-    }
-    .login-bg-1{
-        position: absolute;
-        top: vw(90);
-        left: vw(301);
-        width: vw(449);
-        height: vw(494);
-        @include image-2x('../assets/login-bg1.png', vw(449), vw(494));
-        z-index: 200;
-    }
-    .login-bg-2{
-        position: absolute;
-        top: vw(412);
-        right: vw(350);
-        width: vw(400);
-        height: vw(442);
-        @include image-2x('../assets/login-bg2.png', vw(400), vw(442));
+    
+    .login-bg{
+        position: relative;
+        width: vw(750);
+        height: vw(690);
         z-index: 100;
+        background: url('../assets/login-bg.jpg') no-repeat center center;
+        background-size: cover;
+        @include pm(0,vw(88) 0 0 0);
+        .logo{
+            position: absolute;
+            top: vw(252);
+            left: vw(277);
+            width: vw(197);
+            height: vw(197);
+            @include image-2x('../assets/logo.png', vw(197), vw(197));
+            z-index: 200;
+        }
     }
     .login-wrap{
         border: 1px solid $border;
         @include borderR(5px);
-        @include pm(0,vw(870) vw(30) vw(30) vw(30)) ;
+        @include pm(0,vw(68) vw(30) vw(30) vw(30)) ;
         hr{
             background-color:$s-border;
         }
