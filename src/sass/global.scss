@@ -177,3 +177,22 @@ body{
   -webkit-box-orient: vertical;
   @include line-clamp(3);
 }
+
+.logo-bg{
+    position: relative;
+    width: vw(750);
+    height: vw(690);
+    z-index: 100;
+    background: url('../assets/login-bg.jpg') no-repeat center center;
+    background-size: cover;
+    @include pm(0,vw(88) 0 0 0);
+    .logo{
+        position: absolute;
+        top: 36%;
+        left: vw(277);
+        width: vw(197);
+        height: vw(197);
+        @include image-2x('../assets/logo.png', vw(197), vw(197));
+        z-index: 200;
+    }
+}

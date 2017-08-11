@@ -1,0 +1,26 @@
+组件里写
+<template>
+  <div :style={height: propsHeight}></div>
+</template>
+<script>
+export default {
+  props: {
+    propsHeight: { type: Number }
+  }
+};
+</script>
+
+外部调用
+<template>
+<component :propsHeight="testHeight"></component>
+</template>
+<script>
+export default {
+  data(){ return {testHeight: 10}},
+  methods: {
+    change() {
+      this.testHeight = 20
+    }
+  }
+}
+</script>

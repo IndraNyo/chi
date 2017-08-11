@@ -9,10 +9,14 @@ import './sass/iconfont.css'
 
 Vue.config.productionTip = false
 
+// 路由跳转
+Vue.prototype.$goRoute = function (index) {
+  this.$router.push(index)
+}
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  template: '<App/>',
-  components: { App }
+  render: h => h(App)
 })
