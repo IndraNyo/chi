@@ -10,12 +10,14 @@ const getters = {
 	regShow: state => state.regShow
 }
 const actions = {
-	
+	regShowTgl({commit}){
+		commit('REG_SHOW_TGL')
+	}
 }
 const mutations = {
-	regShowTgl (state) {
-        state.regShow = regShow
-    }
+	REG_SHOW_TGL(state, regShow){
+		state.regShow = regShow
+	}
 }
 
 export default new Vuex.Store({

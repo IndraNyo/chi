@@ -1,5 +1,6 @@
 <template>
     <div id="UserRegister">
+        <p class="reg-title">SIGN UP</p>
         <div class="login-wrap">
             <div class="input-wrap">
                 <i class="idr-email"></i>
@@ -22,27 +23,33 @@
             </div>
         </div>
         <div class="create-btn-wrap">
-            <a id="btnCreate" class="btn-create" href="#">CREATE ACCOUNT</a>
+            <a href="#" id="btnCreate" class="btn-create">CREATE ACCOUNT</a>
+        </div>
+        <div v-show="!regShow" class="register-wrap">
+            <p>Or you still can</p>
         </div>
     </div>
 </template>
 
 <script>
-import {mapState} from 'vuex'
 export default {
-    // computed:{
-    //     ...mapState({
-    //         regShow: state.regShow
-    //     })
-    // }
+    created: function () {
+        this.$store.commit('REG_SHOW_TGL',true)
+    }
 }
 </script>
 
 <style lang="scss" scoped>
+    .reg-title{
+        text-align: center;
+        font-size: vw(42);
+        color: $white;
+        @include pm(0,0 0 vw(40) 0);
+    }
     .login-wrap{
         border: 1px solid $border;
         @include borderR(5px);
-        @include pm(0,vw(68) vw(30) vw(30) vw(30)) ;
+        @include pm(0,0 vw(30) vw(30) vw(30));
         hr{
             background-color:$s-border;
         }

@@ -8,7 +8,7 @@
         <div class="facebook-wrap">
             <a id="btnFacebook" class="btn-facebook" href="#"><i class="idr-facebookicon"></i> SIGN IN WITH FACEBOOK</a>
         </div>
-        <div class="register-wrap">
+        <div v-show="!regShow" class="register-wrap">
             <p>Already have account?</p>
             <p>Please <a @click="$goRoute('/login')" class="btn-register">Sing in</a></p>
         </div>
@@ -16,20 +16,20 @@
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import {mapGetters} from 'vuex'
 
 export default {
-    // computed:{
-    //     ...mapState({
-    //         regShow: state.regShow
-    //     })
-    // },
-    // methods: {
-    //     goRegister() {
-    //         this.$store.commit(true);
-    //         this.$router.push('/userRegister');
-    //     }
-    // }
+    computed: {
+        ...mapGetters({
+            regShow: 'regShow',
+        })
+    },
+    methods: {
+        goRegister() {
+            this.$router.push('/userRegister');
+            this.$store.commit('REG_SHOW_TGL',true)
+        }
+    }
 }
 </script>
 
