@@ -64,7 +64,7 @@
         
     }
     .login-btn-wrap{
-        @include pm(0,0 vw(30) vw(30) vw(30));
+        @include pm(0,0 vw(30) vw(50) vw(30));
         .btn-login{
             @include btn(100%,vw(88));
             @include borderR(5px);

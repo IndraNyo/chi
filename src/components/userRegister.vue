@@ -28,7 +28,14 @@
 </template>
 
 <script>
-
+import {mapState} from 'vuex'
+export default {
+    // computed:{
+    //     ...mapState({
+    //         regShow: state.regShow
+    //     })
+    // }
+}
 </script>
 
 <style lang="scss" scoped>
