@@ -25,7 +25,7 @@
 <script>
 export default {
     created: function () {
-        this.$store.commit('REG_SHOW_TGL',false)
+        this.$store.dispatch('regShowTgl',false);
     }
 }
 </script>

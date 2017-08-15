@@ -1,6 +1,6 @@
 <template>
     <div id="Register">
-        <div v-bind:class="{'shape-ht':regShow}" class="logo-bg"><div class="logo"></div></div>
+        <div v-bind:class="[regShow?'shape-ht':'origin-ht','logo-bg']"><div class="logo"></div></div>
         <transition name="fade"><router-view></router-view></transition>
         <div v-show="!regShow" class="sign-up-wrap">
             <a @click="goRegister()" id="btnSignUp" class="btn-sign-up">SIGN UP</a>
@@ -16,18 +16,21 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex'
+import {mapGetters} from 'vuex';
 
 export default {
+    created: function () {
+        this.$store.dispatch('regShowTgl',false);
+    },
     computed: {
         ...mapGetters({
-            regShow: 'regShow',
+            regShow:'regShow'
         })
     },
     methods: {
         goRegister() {
             this.$router.push('/userRegister');
-            this.$store.commit('REG_SHOW_TGL',true)
+            this.$store.dispatch('regShowTgl',true)
         }
     }
 }
@@ -78,7 +81,11 @@ export default {
     }
     .logo-bg{
         &.shape-ht{
-            height: 66vw;
+            height: vw(495);
+            transition: height 0.35s;
+        }
+        &.origin-ht{
+            height: vw(690);
             transition: height 0.35s;
         }
     }

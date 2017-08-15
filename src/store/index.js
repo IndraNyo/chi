@@ -10,13 +10,13 @@ const getters = {
 	regShow: state => state.regShow
 }
 const actions = {
-	regShowTgl({commit}){
-		commit('REG_SHOW_TGL')
+	regShowTgl({commit}, flag){
+		commit('REG_SHOW_TGL' ,flag)
 	}
 }
 const mutations = {
-	REG_SHOW_TGL(state, regShow){
-		state.regShow = regShow
+	REG_SHOW_TGL (state, flag){
+		state.regShow = flag
 	}
 }
 

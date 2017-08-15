@@ -25,16 +25,27 @@
         <div class="create-btn-wrap">
             <a href="#" id="btnCreate" class="btn-create">CREATE ACCOUNT</a>
         </div>
-        <div v-show="!regShow" class="register-wrap">
+        <div v-show="regShow" class="register-wrap">
             <p>Or you still can</p>
         </div>
     </div>
 </template>
 
 <script>
+import {mapGetters} from 'vuex';
+
 export default {
     created: function () {
-        this.$store.commit('REG_SHOW_TGL',true)
+        this.$store.dispatch('regShowTgl',true);
+    },
+    computed: {
+        ...mapGetters({
+            regShow:'regShow'
+        })
+    },
+    beforeRouteLeave(to,from,next){
+        this.$store.dispatch('regShowTgl',false);
+        next();
     }
 }
 </script>
