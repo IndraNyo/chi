@@ -42,10 +42,13 @@
 .idr-socialinstagram:before { content: "\e879"; }
 .idr-twitter:before { content: "\e601"; }
 .idr-fork:before { content: "\e6d8"; }
+.idr-search:before { content: "\e613"; }
+.idr-arrow-down:before { content: "\e66f"; }
 .idr-email:before { content: "\e644"; }
 .idr-lock:before { content: "\e65c"; }
 .idr-facebookicon:before { content: "\e66e"; }
 .idr-del:before { content: "\e63a"; }
+.idr-menu:before { content: "\e668"; }
 .idr-arr-r:before { content: "\e65a"; }
 .idr-plus:before { content: "\e603"; }
- 
+
