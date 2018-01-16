@@ -15,16 +15,16 @@ export default {
 <style lang="scss" scoped>
     .main-header{
         position: relative;
-        height: vw(70);
+        height: vw(90);
         overflow: hidden;
         .btn-menu{
             position: absolute;
             display: block;
-            height: vw(70);
+            height: vw(90);
             width: vw(120);
             left: 0;
             top: 0;
-            @include pm(vw(15) vw(35) vw(5) vw(35),0);
+            @include pm(vw(25) vw(35) vw(5) vw(35),0);
             i{
                 color: $smoke;
                 font-size: vw(42);
@@ -36,16 +36,16 @@ export default {
             width: vw(60);
             background: url('../assets/logo.png') no-repeat center center;
             background-size: cover;
-            @include pm(0,vw(5) auto)
+            @include pm(0,vw(15) auto)
         }
         .btn-search{
             display: block;
             position: absolute;
             right: 0;
             top: 0;
-            height: vw(70);
+            height: vw(90);
             width: vw(100);
-            @include pm(vw(20) vw(25) vw(0) vw(25),0);
+            @include pm(vw(25) vw(25) vw(0) vw(25),0);
                 i{
                     color: $smoke;
                     font-size: vw(42);

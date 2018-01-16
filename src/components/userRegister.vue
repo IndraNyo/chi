@@ -35,6 +35,7 @@
 import {mapGetters} from 'vuex';
 
 export default {
+    name:'userRegister',
     created: function () {
         this.$store.dispatch('regShowTgl',true);
     },
