@@ -10,7 +10,6 @@ import './sass/iconfont.css'
 
 Vue.config.productionTip = false
 
-
 // 路由跳转
 Vue.prototype.$goRoute = function (index) {
   this.$router.push(index)
