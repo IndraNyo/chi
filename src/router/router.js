@@ -6,9 +6,6 @@ import main from '@/pages/main'
 import user from '@/pages/user'
 import userRegister from '@/components/userRegister'
 
-
-
-
 Vue.use(Router)
 
 export default new Router({
