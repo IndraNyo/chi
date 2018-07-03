@@ -1,7 +1,8 @@
 <template>
     <div class="main-header">
         <a class="btn-menu"><i class="idr-menu"></i></a>
-        <span class="logo-wrap"></span>
+        <span v-if="title == undefined" class="logo-wrap"></span>
+        <span v-if="title !== undefined" class="title-wrap">{{ title | capitalize }}</span>
         <a class="btn-search"><i class="idr-search"></i></a>
     </div>
 </template>
@@ -9,6 +10,13 @@
 <script>
 export default {
     name:'mainHeader',
+    props: ['title'],
+    filters: {
+    capitalize: function (value) {
+            value = value.toString()
+            return value.toUpperCase()
+        }
+    }
 }
 </script>
 
@@ -30,10 +38,21 @@ export default {
                 font-size: vw(42);
             }
         }
+        .title-wrap{
+            display: block;
+            height: vw(90);
+            line-height: vw(90);
+            width: vw(300);
+            text-align: center;
+            color: $white;
+            font-family: FjallaOne-Regular;
+            @include pm(0,0 auto)
+        }
         .logo-wrap{
             display: block;
             height: vw(60);
             width: vw(60);
+            color: $white;
             background: url('../assets/logo.png') no-repeat center center;
             background-size: cover;
             @include pm(0,vw(15) auto)

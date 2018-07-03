@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="Main">
         <mainHeader></mainHeader>
         <div class="main-banner">
             <div class="main-bg-masker"></div>

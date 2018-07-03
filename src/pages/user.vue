@@ -14,8 +14,19 @@
         <div class="user-info-list">
             <dl>
                 <dt>INFO</dt>
-                <dd><input type="text"></dd>
+                <dd><input type="text" placeholder="Name"></dd>
+                <dd><input type="email" placeholder="E-mail"></dd>
+                <dd><input type="text" placeholder="Bio"></dd>
             </dl>
+            <dl>
+                <dt>SOCIAL</dt>
+                <dd class="social"><i class="idr-facebookicon"></i><input  type="text" placeholder="Facebook"></dd>
+                <dd class="social"><i class="idr-twitter"></i><input type="text" placeholder="Twitter"></dd>
+                <dd class="social"><i class="idr-socialinstagram"></i><input type="text" placeholder="Instagram"></dd>
+            </dl>
+        </div>
+        <div>
+            <a href="####" class="btn-del-pf"><i class="idr-del"></i>DELETE PROFILE</a>
         </div>
     </div>
 </template>
@@ -27,10 +38,14 @@ export default {
 </script>
 
 <style lang="scss" scopped>
+    body{
+        background-color: $grey;
+    }
     .user-header{
         position: relative;
         height: vw(90);
         overflow: hidden;
+        background-color: $mainColor;
         .btn-cancel{
             position: absolute;
             display: block;
@@ -39,6 +54,7 @@ export default {
             width: vw(160);
             left: 0;
             top: 0;
+            font-size: vw(30);
             color: $secondaryTxt;
             text-align: center;
             @include pm(0,0 vw(30));
@@ -63,9 +79,10 @@ export default {
         background-color: $grey;
         overflow: hidden;
         .user-avatar{
-            height: vw(200);
-            width: vw(200);
+            height: vw(210);
+            width: vw(210);
             overflow: hidden;
+            border: vw(2) solid $border-g;
             @include borderR(vw(100));
             @include pm(0,vw(30) auto 0 auto);
             img{
@@ -76,7 +93,7 @@ export default {
         }
         .btn-blu-txt{
             @include btn(vw(180),vw(30));
-            font-size: vw(30);
+            font-size: vw(28);
             font-weight: 600;
             overflow: hidden;
             color: $primaryColor;
@@ -100,10 +117,55 @@ export default {
                 height: vw(90);
                 background-color: $white;
                 border: vw(1) solid $border-g;
+                &.social{
+                    @include pm(0 0 0 vw(18),0);
+                    i{
+                        float: left;
+                        font-size: vw(46);
+                        @include pm(0,vw(18) 0 0 0);
+                        &.idr-facebookicon{
+                            color: #06c;
+                        }
+                        &.idr-twitter{
+                            color: #01bad4;
+                        }
+                        &.idr-socialinstagram{
+                            color: #999;
+                        }
+                    }
+                    input{
+                        float: left;
+                        width: vw(680);
+                    }
+                }
             }
         }
         input{
             border: none;
+            height: vw(88);
+            width: 100%;
+            font-size: vw(28);
+            outline:none;
+            @include pm(0 vw(20),0);
+            
+        }
+    }
+    .btn-del-pf{
+        display: block;
+        height: vw(88);
+        line-height: vw(88);
+        width: vw(690);
+        font-size: vw(30);
+        font-weight: 300;
+        background-color: $primaryCur;
+        text-align: center;
+        color: $white;
+        border-radius: vw(10);
+        font-family: FjallaOne-Regular;
+        letter-spacing: 0;
+        @include pm(0,vw(85) auto vw(10) auto);
+        i{
+            @include pm(0,0 vw(10) 0 0)
         }
     }
 </style>

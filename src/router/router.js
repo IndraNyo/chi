@@ -4,10 +4,8 @@ import login from '@/pages/login'
 import register from '@/pages/register'
 import main from '@/pages/main'
 import user from '@/pages/user'
+import profile from '@/pages/profile'
 import userRegister from '@/components/userRegister'
-
-
-
 
 Vue.use(Router)
 
@@ -15,8 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'user',
-      component: user
+      name: 'profile',
+      component: profile
     },
     {
       path: '/main',
@@ -27,6 +25,16 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: login
+    },
+    {
+      path: '/user',
+      name: 'edit profile',
+      component: user
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: profile
     },
     {
       path: '/register',
