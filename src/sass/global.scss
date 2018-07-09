@@ -172,15 +172,6 @@ body{
   font-family:Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", STXihei, "Microsoft YaHei";
 }
 
-.line-clamp {
-  overflow : hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3; // 这里修改为要显示的行数
-  -webkit-box-orient: vertical;
-  @include line-clamp(3);
-}
-
 .logo-bg{
     position: relative;
     width: vw(750);

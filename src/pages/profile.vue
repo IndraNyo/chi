@@ -6,7 +6,18 @@
                 <img src="../assets/user.jpg" >
             </div>
             <div class="status-wrap">
-                123
+                <div class="title-wrap">
+                    <h6>Sakura PinkSnow</h6>
+                    <span>Eating my wings to make me tame</span>
+                </div>
+                <div class="core-wrap">
+                    <div class="recipes-wrap">
+
+                    </div>
+                    <div class="rating-wrap">
+
+                    </div>
+                </div>
             </div>
         </div>
         <products-list></products-list>
@@ -50,16 +61,55 @@ export default {
         .status-wrap{
             float: right;
             height: vw(210);
-            width: vw(460);
-            background-color: $white;
+            width: vw(440);
+            @include pm(0 vw(20) 0 0,0);
             .title-wrap{
                 h6{
                     color: $white;
+                    font-size: vw(32);
+                    font-family: Avenir-Black;
+                    @include pm(0,0 0 vw(10) 0);
                 }
                 span{
+                    display: block;
+                    height: vw(75);
+                    line-height: vw(75);
+                    @include line-clamp(2);
                     color: $thirdlyTxt;
+                    font-family: Avenir-Book;
+                    font-size: vw(26);
                 }
             }
+            .score-wrap{
+                height: vw(70);
+                .recipes-wrap{
+                    float: left;
+                    width: vw(219);
+                    border-right: vw(1) solid $white;
+                    .num{
+                        float: left;
+                        
+                    }
+                    .ico-txt{
+                        width: vw(66);
+                        i{
+                            display: block;
+                        }
+                        s{
+                            display: block;
+                            font-style: normal;
+                            font-size: vw(16);
+                            color: $white;
+                        }
+                    }
+                }
+                .rating-wrap{
+                    @extend .recipes-wrap;
+                    float: left;
+                    width: vw(220)
+                }
+            }
+            
         }
     }
     .btn-edit-pf{
