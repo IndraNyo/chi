@@ -4,6 +4,9 @@
         <span v-if="title == undefined" class="logo-wrap"></span>
         <span v-if="title !== undefined" class="title-wrap">{{ title | capitalize }}</span>
         <a class="btn-search"><i class="idr-search"></i></a>
+        <div class="mian-nav">
+            
+        </div>
     </div>
 </template>
 
@@ -45,7 +48,7 @@ export default {
             width: vw(300);
             text-align: center;
             color: $white;
-            font-family: FjallaOne-Regular;
+            font-family: FjallaOne-Regular, Avenir-Book;
             @include pm(0,0 auto)
         }
         .logo-wrap{
