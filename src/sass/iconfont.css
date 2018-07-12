@@ -51,4 +51,7 @@
 .idr-menu:before { content: "\e668"; }
 .idr-arr-r:before { content: "\e65a"; }
 .idr-plus:before { content: "\e603"; }
-
+.idr-ybbcook:before { content: "\e635"; }
+.idr-collection:before { content: "\e60a"; }
+.idr-shoppingBag:before { content: "\e6a0"; }
+.idr-filedone:before { content: "\e7b4"; }

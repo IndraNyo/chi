@@ -13,8 +13,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'profile',
-      component: profile
+      name: 'main',
+      component: main
     },
     {
       path: '/main',

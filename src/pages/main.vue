@@ -1,6 +1,6 @@
 <template>
     <div id="Main">
-        <mainHeader></mainHeader>
+        <main-header></main-header>
         <div class="main-banner">
             <div class="main-bg-masker"></div>
             <h1>HAPPY B-DAY COLLECTION</h1>
