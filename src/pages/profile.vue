@@ -125,7 +125,7 @@ export default {
                         width: vw(68);
                         i{
                             display: block;
-                            color: $d-gray;
+                            color: $gray;
                             font-size: vw(36);
                         }
                         s{

@@ -219,7 +219,7 @@ export default {
             line-height: vw(70);
             border: vw(2) solid $thirdlyTxt;
             font-family: FjallaOne-Regular ,Avenir-Book;
-            color: $d-gray;
+            color: $gray;
             text-align: center;
             border-radius: vw(5);
             &:before{

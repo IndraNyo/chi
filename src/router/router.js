@@ -5,6 +5,9 @@ import register from '@/pages/register'
 import main from '@/pages/main'
 import user from '@/pages/user'
 import profile from '@/pages/profile'
+import addRecipe from '@/pages/addRecipe'
+import checkRecipe from '@/pages/checkRecipe'
+import shoppingList from '@/pages/shoppingList'
 import userRegister from '@/components/userRegister'
 
 Vue.use(Router)
@@ -13,8 +16,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'main',
-      component: main
+      name: 'addRecipe',
+      component: addRecipe
     },
     {
       path: '/main',
@@ -35,6 +38,21 @@ export default new Router({
       path: '/profile',
       name: 'profile',
       component: profile
+    },
+    {
+      path: '/checkRecipe',
+      name: 'checkRecipe',
+      component: checkRecipe
+    },
+    {
+      path: '/shoppingList',
+      name: 'shoppingList',
+      component: shoppingList
+    },
+    {
+      path: '/addRecipe',
+      name: 'addRecipe',
+      component: addRecipe
     },
     {
       path: '/register',
