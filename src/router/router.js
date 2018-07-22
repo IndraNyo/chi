@@ -16,8 +16,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'addRecipe',
-      component: addRecipe
+      name: 'login',
+      component: login
     },
     {
       path: '/main',

@@ -37,8 +37,8 @@ exports.cssLoaders = function (options) {
     if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
+        publicPath: '../../',
         fallback: 'vue-style-loader'
-        //publicPath: '../../'
       })
     } else {
       return ['vue-style-loader'].concat(loaders)
@@ -64,6 +64,7 @@ exports.cssLoaders = function (options) {
       if (options.extract) {
         return ExtractTextPlugin.extract({
           use: loaders,
+          publicPath: '../../', // 解决build图片路径问题
           fallback: 'vue-style-loader'
         })
       } else {

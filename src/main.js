@@ -5,6 +5,7 @@ import App from './App'
 import router from './router/router.js'
 import store from './store/'
 
+import './sass/global.scss'
 import './sass/reset.scss'
 import './sass/iconfont.css'
 
